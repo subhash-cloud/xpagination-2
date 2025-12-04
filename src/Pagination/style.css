@@ -1,0 +1,47 @@
+*{
+    margin:0;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    margin:10px;
+    padding:20px;
+}
+
+.container thead{
+    background-color: aquamarine;
+    color:white;
+}
+
+
+.container tr{
+    margin-bottom: 3px;
+    font-family:Arial, Helvetica, sans-serif;
+   font-weight:100;
+   color:black;
+}
+
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper button{
+    margin:10px;
+    width:100px; 
+    height:30px;
+    background-color:rgb(1, 255, 179);
+    border-radius: 5px;
+    border:none;
+}
