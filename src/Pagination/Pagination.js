@@ -15,46 +15,53 @@ function Pagination() {
 
       setData(data);
     } catch (error) {
-      throw new Error(`fail to fetch data`);
+      alert("failed to fetch data");
     }
   };
 
-    fetchData();
+  useEffect(()=>{
+   fetchData()
+  }, [])
+ 
 
-  let itemPerPage=10;
-  let start=(page-1)*itemPerPage
-  let totalPages=Math.ceil(data.length/itemPerPage)
-  
-  let pageData=data.slice(start, start+itemPerPage)
+  let itemPerPage = 10;
+  let start = (page - 1) * itemPerPage;
+  let totalPages = Math.ceil(data.length / itemPerPage);
+
+  let pageData = data.slice(start, start + itemPerPage);
 
   const handlePrev = () => {
-      setPage(page-1)
+    setPage(page - 1);
   };
 
   const handleNext = () => {
-    setPage(page+1)
+    setPage(page + 1);
   };
 
   // useEffect(() => {
-  
+
   // }, []);
 
   return (
     <>
-      <div className="parent">
+      
         <header className="header">
           <h2>Employee Data Table</h2>
         </header>
         <div className="container">
           <table>
+            
             <thead>
+             
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Role</th>
               </tr>
+             
             </thead>
+             
             <tbody>
               {pageData.map((row) => (
                 <tr key={row.id}>
@@ -69,11 +76,15 @@ function Pagination() {
         </div>
 
         <div className="button-wrapper">
-          <button  disabled={page === 1} onClick={handlePrev}>prev</button>
-         <button>{page}</button>
-          <button  disabled={page === totalPages} onClick={handleNext}>next</button>
+          <button disabled={page === 1} onClick={handlePrev}>
+            prev
+          </button>
+          <button>{page}</button>
+          <button disabled={page === totalPages} onClick={handleNext}>
+            next
+          </button>
         </div>
-      </div>
+    
     </>
   );
 }
