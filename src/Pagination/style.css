@@ -38,6 +38,7 @@ th{
 .button-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .button-wrapper button{
@@ -56,6 +57,10 @@ td{
     font-weight: 20;
 }
 
-/* .headRow{
-    width:100px;
-} */
+.page{
+    height:30px ;
+    width:50px;
+    background-color: rgba(12  139 105);
+    border-radius: 5px;
+    color:white;
+}
