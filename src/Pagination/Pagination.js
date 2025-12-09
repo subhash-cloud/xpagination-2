@@ -35,7 +35,7 @@ function Pagination() {
   };
 
   const handleNext = () => {
-   if(page>totalPages) setPage(page-1)
+   if(page<totalPages) setPage(page+1)
   };
 
   // useEffect(() => {
@@ -79,7 +79,7 @@ function Pagination() {
           <button disabled={page === 1} onClick={handlePrev}>
             prev
           </button>
-          <div>{page}</div>
+          <div className="page">{page}</div>
           <button disabled={page === totalPages} onClick={handleNext}>
             next
           </button>
