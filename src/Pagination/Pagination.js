@@ -31,15 +31,11 @@ function Pagination() {
   let pageData = data.slice(start, start + itemPerPage);
 
   const handlePrev = () => {
-    if(page>1){
-         setPage(page - 1);
-    }
- 
+    if(page>1) setPage(page-1)
   };
 
   const handleNext = () => {
-    if(page<totalPages){
-      setPage(page+1)
+   if(page>totalPages) setPage(page-1)
   };
 
   // useEffect(() => {
