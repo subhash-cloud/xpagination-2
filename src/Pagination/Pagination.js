@@ -77,11 +77,11 @@ function Pagination() {
 
         <div className="button-wrapper">
           <button disabled={page === 1} onClick={handlePrev}>
-            prev
+            Previous
           </button>
           <div className="page">{page}</div>
           <button disabled={page === totalPages} onClick={handleNext}>
-            next
+            Next
           </button>
         </div>
     
